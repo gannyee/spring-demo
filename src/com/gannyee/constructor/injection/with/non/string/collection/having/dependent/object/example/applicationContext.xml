@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="a1"
+          class="com.gannyee.constructor.injection.with.non.string.collection.having.dependent.object.example.Answer">
+        <constructor-arg value="1" type="int"></constructor-arg>
+        <constructor-arg value="gannye2"></constructor-arg>
+        <constructor-arg value="gannyeBy"></constructor-arg>
+    </bean>
+
+    <bean id="a2"
+          class="com.gannyee.constructor.injection.with.non.string.collection.having.dependent.object.example.Answer">
+        <constructor-arg value="2" type="int"></constructor-arg>
+        <constructor-arg value="gannye2"></constructor-arg>
+        <constructor-arg value="gannyeBy"></constructor-arg>
+    </bean>
+
+    <bean id="a3"
+          class="com.gannyee.constructor.injection.with.non.string.collection.having.dependent.object.example.Answer">
+        <constructor-arg value="3" type="int"></constructor-arg>
+        <constructor-arg value="gannye3"></constructor-arg>
+        <constructor-arg value="gannyeBy"></constructor-arg>
+    </bean>
+
+    <bean id="q"
+          class="com.gannyee.constructor.injection.with.non.string.collection.having.dependent.object.example.Question">
+        <constructor-arg value="111"></constructor-arg>
+        <constructor-arg value="What is java?"></constructor-arg>
+        <constructor-arg>
+            <list>
+                <ref bean="a1"/>
+                <ref bean="a2"/>
+                <ref bean="a3"/>
+            </list>
+        </constructor-arg>
+    </bean>
+</beans>

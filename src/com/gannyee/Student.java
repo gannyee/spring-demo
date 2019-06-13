@@ -1,0 +1,23 @@
+package com.gannyee;
+
+/**
+ * @author: gany@koal.com
+ * @description:
+ * @created: 2019-06-05
+ **/
+public class Student {
+
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void displayInfo() {
+        System.out.println("Hello: " + name);
+    }
+}
